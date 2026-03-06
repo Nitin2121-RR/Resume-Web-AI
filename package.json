@@ -1,0 +1,17 @@
+{
+  "name": "nitin-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website of Nitin Kumar Patel",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "portfolio",
+    "personal-website",
+    "web-development"
+  ],
+  "author": "Nitin Kumar Patel",
+  "license": "MIT"
+}
