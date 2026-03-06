@@ -349,26 +349,88 @@ section {
 }
 
 .contact-text {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    opacity: 0.8;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    opacity: 0.85;
+    font-weight: 300;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.contact-button {
-    display: inline-block;
-    padding: 1rem 3rem;
-    background: transparent;
+.contact-info {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.email-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.email-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: left;
+}
+
+.email-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 107, 107, 0.3);
+    box-shadow: 0 15px 40px rgba(255, 107, 107, 0.1);
+}
+
+.email-item svg {
+    flex-shrink: 0;
+    color: var(--accent);
+    margin-top: 0.2rem;
+}
+
+.email-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.email-link {
     color: var(--secondary);
     text-decoration: none;
-    border: 2px solid var(--accent);
-    border-radius: 50px;
-    font-weight: 600;
+    font-size: 1rem;
     transition: all 0.3s ease;
+    word-break: break-all;
 }
 
-.contact-button:hover {
-    background: var(--accent);
-    transform: scale(1.05);
+.email-link:hover {
+    color: var(--accent);
+}
+
+.social-section {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.social-heading {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary);
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 /* Responsive */
@@ -446,11 +508,6 @@ section {
         grid-template-columns: 1fr;
     }
     
-    .contact-links {
-        flex-direction: column;
-        align-items: center;
-    }
-    
     .hero h1 {
         font-size: clamp(2rem, 10vw, 3rem);
     }
@@ -467,17 +524,33 @@ section {
     .scroll-indicator {
         bottom: 2rem;
     }
+
+    .email-section {
+        grid-template-columns: 1fr;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .social-icon {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+    }
 }
 
 
 /* Additional styles for resume sections */
 .subtitle-small {
-    font-size: 0.95rem;
-    font-weight: 300;
+    font-size: 1rem;
+    font-weight: 700;
     margin-top: 1.5rem;
     margin-bottom: 2rem;
-    opacity: 0.8;
-    letter-spacing: 1.5px;
+    opacity: 0.9;
+    letter-spacing: 2px;
     animation: fadeInUp 1.6s ease-out;
     text-transform: uppercase;
 }
@@ -608,6 +681,18 @@ section {
     border: 1px solid transparent;
 }
 
+.skill-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-tag svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
 .skill-tags span:hover {
     background: var(--accent);
     transform: scale(1.05);
@@ -644,46 +729,9 @@ section {
     border-bottom: none;
 }
 /* Contact Links */
-.contact-links {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-}
-
 .social-links {
     margin-top: 2rem;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
 }
-
-.social-links p {
-    margin: 0.8rem 0;
-    font-size: 1.1rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .experience-grid,
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-links {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .nav-links {
-        font-size: 0.9rem;
-        gap: 0.5rem;
-    }
-}
-
-
 /* Smooth scrolling improvements */
 html {
     scroll-behavior: smooth;
