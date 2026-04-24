@@ -870,6 +870,31 @@ h3 {
 }
 
 
+.project-points {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.project-points li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(245, 245, 245, 0.8);
+    font-weight: 300;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.project-points li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
 /* Live Demo Button */
 .demo-button {
     display: inline-block;
